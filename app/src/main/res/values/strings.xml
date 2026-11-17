@@ -67,7 +67,7 @@
     <string name="up_to_date">You have the latest version</string>
     <string name="check_failed">Could not reach GitHub. Check your internet connection and try again.</string>
     <string name="update_title">Update available</string>
-    <string name="update_message">TimeAtlas %1$s is available. You have %2$s.</string>
+    <string name="update_message">TimeAtlas %1$s (build %2$d) is available. You have %3$s (build %4$d).</string>
     <string name="update_now">Update</string>
     <string name="later">Later</string>
     <string name="downloading">Downloading…</string>

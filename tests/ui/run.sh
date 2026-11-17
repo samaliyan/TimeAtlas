@@ -68,7 +68,7 @@ shot 06_date_picker
 back
 
 # 6. Add a city by search
-tap "Add city"
+tap "Add city"; sleep 1.5      # let the search field and keyboard settle before typing
 adb shell input text tokyo; sleep 1
 shot 07_search_tokyo
 tap "Tokyo"
@@ -76,7 +76,7 @@ shot 08_tokyo_added 2
 expect "Tokyo"
 
 # 7. Search with no result, then a country and an abbreviation
-tap "Add city"
+tap "Add city"; sleep 1.5
 adb shell input text zzqx; sleep 1
 shot 09_no_results
 expect "No matching city or time zone"

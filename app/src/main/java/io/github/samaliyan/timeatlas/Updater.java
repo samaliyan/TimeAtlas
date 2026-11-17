@@ -102,7 +102,7 @@ final class Updater {
                 String notes = CODE.matcher(body).replaceAll("").trim();
                 new Store(act).setLastUpdateCheck(System.currentTimeMillis());
                 ui(() -> {
-                    if (code > versionCode()) offer(version, notes);
+                    if (code > versionCode()) offer(version, code, notes);
                     else if (!silent) Toast.makeText(act, R.string.up_to_date, Toast.LENGTH_SHORT).show();
                 });
             } catch (Exception e) {
@@ -113,18 +113,24 @@ final class Updater {
         }, "update-check").start();
     }
 
-    private void offer(String version, String notes) {
-        StringBuilder msg = new StringBuilder(act.getString(R.string.update_message, version, versionName()));
-        if (!notes.isEmpty()) {
-            String n = notes.length() > 700 ? notes.substring(0, 700) + "…" : notes;
-            msg.append("\n\n").append(n.replaceAll("(?m)^#+\\s*", ""));
-        }
+    private void offer(String version, int code, String notes) {
+        StringBuilder msg = new StringBuilder(act.getString(R.string.update_message, version, code, versionName(), versionCode()));
+        String n = shortNotes(notes, 420);
+        if (!n.isEmpty()) msg.append("\n\n").append(n);
         new AlertDialog.Builder(act, ui.dialogTheme())
                 .setTitle(R.string.update_title)
                 .setMessage(msg)
                 .setPositiveButton(R.string.update_now, (d, w) -> download())
                 .setNegativeButton(R.string.later, null)
                 .show();
+    }
+
+    /** Release notes for the dialog: markdown marks removed, cut at a whole line, at most {@code max} characters. */
+    static String shortNotes(String notes, int max) {
+        String n = notes.replaceAll("(?m)^#+\\s*", "").replaceAll("(?m)^\\s*[-*]\\s+", "\u2022 ").trim();
+        if (n.length() <= max) return n;
+        int cut = n.lastIndexOf('\n', max);
+        return (cut > 0 ? n.substring(0, cut) : n.substring(0, max)).trim() + "\n\u2026";
     }
 
     // ------------------------------------------------------------------ download
