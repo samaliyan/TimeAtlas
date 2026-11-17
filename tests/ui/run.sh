@@ -11,7 +11,7 @@ FAILS=0
 log() { echo "[ui] $*" | tee -a "$OUT/report.txt"; }
 fail() { log "FAIL: $*"; FAILS=$((FAILS+1)); }
 
-dump() { adb shell uiautomator dump /sdcard/ui.xml > /dev/null 2>&1; adb exec-out cat /sdcard/ui.xml > "$OUT/.ui.xml"; }
+dump() { timeout 30 adb shell uiautomator dump /sdcard/ui.xml > /dev/null 2>&1; timeout 15 adb exec-out cat /sdcard/ui.xml > "$OUT/.ui.xml"; }
 shot() {      # shot NAME  → screenshot, UI dump and overlap check
   sleep "${2:-1.2}"
   adb exec-out screencap -p > "$OUT/$1.png"
@@ -31,7 +31,7 @@ longpress() { local p; p=$(nfind "$1"); [ -n "$p" ] || { fail "cannot find '$1'"
 expect() { [ -n "$(nfind "$1" "${2:-}")" ] && log "ok: sees '$1'" || fail "expected '$1' on screen"; }
 expect_not() { [ -z "$(nfind "$1" "${2:-}")" ] && log "ok: no '$1'" || fail "did not expect '$1'"; }
 back() { adb shell input keyevent KEYCODE_BACK; sleep 0.8; }
-launch() { adb shell am start -W --activity-clear-top -n "$PKG/.MainActivity" > /dev/null; sleep 2; }   # back to the main screen
+launch() { adb shell am start --activity-clear-top -n "$PKG/.MainActivity" > /dev/null; sleep 3; }   # back to the main screen (no -W: it can wait forever when the activity is only brought to front)
 
 log "API $API"
 adb install -r "$APK" || { echo "install failed"; exit 1; }
