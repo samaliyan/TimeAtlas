@@ -205,7 +205,7 @@ public final class CityPickerActivity extends Activity {
             time = ui.line(16, ui.text, Ui.REGULAR);
             Ui.tabular(time);
             diff = ui.line(12, ui.sub, Ui.REGULAR);
-            right.addView(time);
+            right.addView(time, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             lp2.topMargin = ui.dp(4);
             right.addView(diff, lp2);

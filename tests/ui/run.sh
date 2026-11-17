@@ -31,7 +31,7 @@ longpress() { local p; p=$(nfind "$1"); [ -n "$p" ] || { fail "cannot find '$1'"
 expect() { [ -n "$(nfind "$1" "${2:-}")" ] && log "ok: sees '$1'" || fail "expected '$1' on screen"; }
 expect_not() { [ -z "$(nfind "$1" "${2:-}")" ] && log "ok: no '$1'" || fail "did not expect '$1'"; }
 back() { adb shell input keyevent KEYCODE_BACK; sleep 0.8; }
-launch() { adb shell am start -W -n "$PKG/.MainActivity" > /dev/null; sleep 2; }
+launch() { adb shell am start -W --activity-clear-top -n "$PKG/.MainActivity" > /dev/null; sleep 2; }   # back to the main screen
 
 log "API $API"
 adb install -r "$APK" || { echo "install failed"; exit 1; }
@@ -83,7 +83,7 @@ expect "No matching city or time zone"
 for i in 1 2 3 4; do adb shell input keyevent KEYCODE_DEL; done
 adb shell input text usa; sleep 1
 shot 10_search_usa
-expect "Los Angeles"
+expect "New York"; expect "Washington, D.C."
 back; back
 launch
 
@@ -121,6 +121,11 @@ if [ -n "$(nfind "Add widget to home screen")" ]; then
   sleep 2
   adb shell input keyevent KEYCODE_HOME
   shot 20_home_screen_widget 3
+  if [ -z "$(nfind "London")" ]; then      # the launcher may put it on the next page
+    adb shell input swipe 900 1200 150 1200 300
+    shot 20b_home_screen_widget_page2 2
+  fi
+  [ -n "$(nfind "London")" ] && log "ok: widget is on the home screen" || fail "widget not visible on the home screen"
   launch
 else
   log "pin widget not supported by this launcher"

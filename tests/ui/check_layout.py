@@ -19,8 +19,10 @@ def main():
         r = rect(n)
         if r and (screen is None or (r[2] - r[0]) * (r[3] - r[1]) > (screen[2] - screen[0]) * (screen[3] - screen[1])):
             screen = r
+    # Only the app's own views: Android's built-in widgets (date/time pickers…) have "android:id/…" IDs.
     texts = [(n.get('text'), rect(n)) for n in nodes
-             if n.get('package') == pkg and (n.get('text') or '').strip() and rect(n)]
+             if n.get('package') == pkg and (n.get('text') or '').strip() and rect(n)
+             and not (n.get('resource-id') or '').startswith('android:id/')]
     bad = 0
     for i in range(len(texts)):
         t1, a = texts[i]

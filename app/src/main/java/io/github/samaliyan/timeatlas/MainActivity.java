@@ -326,7 +326,9 @@ public final class MainActivity extends Activity {
             time.setSingleLine(true);
             Ui.tabular(time);
             timeRow.addView(time);
-            right.addView(timeRow);
+            // WRAP_CONTENT matters: the default for a vertical LinearLayout is MATCH_PARENT,
+            // which would squeeze the time to the width of the date line below it.
+            right.addView(timeRow, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             day = ui.line(13, ui.sub, Ui.REGULAR);
             LinearLayout.LayoutParams dlp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             dlp.topMargin = ui.dp(4);
@@ -416,7 +418,7 @@ public final class MainActivity extends Activity {
                 r.dayIcon.setImageDrawable(Icons.of(day ? Icons.Kind.SUN : Icons.Kind.MOON, day ? ui.sun : ui.moon));
                 r.dayIcon.setContentDescription(getString(day ? R.string.daytime : R.string.night));
             }
-            boolean highlighted = !live && r.city.equals(anchor);
+            boolean highlighted = !live && !editMode && r.city.equals(anchor);
             if (r.shownHighlight == null || r.shownHighlight != highlighted) {
                 r.shownHighlight = highlighted;
                 r.root.setBackground(ui.ripple(highlighted ? ui.outline(ui.accentSoft, ui.accent, 20) : ui.round(ui.surface, 20), 20));
@@ -557,6 +559,7 @@ public final class MainActivity extends Activity {
 
     private void applyEditMode() {
         for (Row r : rows) r.setEditing(editMode);
+        refresh();
         addBtn.setVisibility(editMode ? View.GONE : View.VISIBLE);
         menuBtn.setVisibility(editMode ? View.GONE : View.VISIBLE);
         doneBtn.setVisibility(editMode ? View.VISIBLE : View.GONE);
