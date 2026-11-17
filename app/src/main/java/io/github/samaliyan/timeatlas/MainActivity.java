@@ -285,6 +285,7 @@ public final class MainActivity extends Activity {
         final LinearLayout right;
         Boolean shownHighlight, shownDay;      // avoids rebuilding drawables on every frame of a ruler drag
 
+        @SuppressLint("ClickableViewAccessibility")   // reordering is also in the row menu (Move up / Move down)
         Row(City c) {
             city = c;
             zone = ZoneId.of(c.zoneId);
@@ -521,9 +522,12 @@ public final class MainActivity extends Activity {
 
     private void showRowMenu(Row row) {
         PopupMenu m = new PopupMenu(popupContext(), row.name);
+        int idx = cities.indexOf(row.city);
         if (!row.city.equals(home)) m.getMenu().add(0, 1, 0, R.string.set_home);
-        m.getMenu().add(0, 2, 1, R.string.edit_list);
-        m.getMenu().add(0, 3, 2, R.string.remove);
+        if (idx > 0) m.getMenu().add(0, 4, 1, R.string.move_up);
+        if (idx >= 0 && idx < cities.size() - 1) m.getMenu().add(0, 5, 2, R.string.move_down);
+        m.getMenu().add(0, 2, 3, R.string.edit_list);
+        m.getMenu().add(0, 3, 4, R.string.remove);
         m.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {
                 case 1:
@@ -533,6 +537,10 @@ public final class MainActivity extends Activity {
                     break;
                 case 2:
                     setEditMode(true);
+                    break;
+                case 4:
+                case 5:
+                    move(row.city, item.getItemId() == 4 ? -1 : 1);
                     break;
                 default:
                     removeCity(row.city);
@@ -564,6 +572,16 @@ public final class MainActivity extends Activity {
             store.setHome(home);
         }
         if (c.key().equals(anchorKey)) anchorKey = null;
+        rebuildRows();
+        WidgetProvider.updateAll(this);
+    }
+
+    private void move(City c, int delta) {
+        int from = cities.indexOf(c), to = from + delta;
+        if (from < 0 || to < 0 || to >= cities.size()) return;
+        cities.remove(from);
+        cities.add(to, c);
+        store.setCities(cities);
         rebuildRows();
         WidgetProvider.updateAll(this);
     }

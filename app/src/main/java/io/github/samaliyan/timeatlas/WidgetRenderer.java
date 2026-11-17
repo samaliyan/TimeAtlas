@@ -1,5 +1,6 @@
 package io.github.samaliyan.timeatlas;
 
+import android.annotation.TargetApi;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
@@ -120,6 +121,7 @@ final class WidgetRenderer {
     }
 
     @SuppressWarnings("deprecation")
+    @TargetApi(31)   // only called on Android 12+
     private static ArrayList<SizeF> sizes(Bundle o) {
         return Build.VERSION.SDK_INT >= 33 ? o.getParcelableArrayList(AppWidgetManager.OPTION_APPWIDGET_SIZES, SizeF.class)
                 : o.getParcelableArrayList(AppWidgetManager.OPTION_APPWIDGET_SIZES);
