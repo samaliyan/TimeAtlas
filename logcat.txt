@@ -1,0 +1,200 @@
+11-17 13:02:19.786  6340  6340 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:20.835  6340  6340 D AndroidRuntime: Shutting down VM
+11-17 13:02:21.029  6356  6356 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:21.086  6356  6356 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:02:21.106  6356  6356 D AndroidRuntime: Shutting down VM
+11-17 13:02:22.064  6366  6366 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:22.118  6366  6366 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:23.197  6366  6366 D AndroidRuntime: Shutting down VM
+11-17 13:02:23.411  6381  6381 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:23.497  6381  6381 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:02:23.507  6381  6381 D AndroidRuntime: Shutting down VM
+11-17 13:02:23.570  1693  2564 I ActivityManager: START u0 {cmp=io.github.samaliyan.timeatlas/.SettingsActivity} from uid 10077
+11-17 13:02:23.735  1693  1717 I ActivityManager: Displayed io.github.samaliyan.timeatlas/.SettingsActivity: +138ms
+11-17 13:02:24.445  6391  6391 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:24.509  6391  6391 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:25.635  6391  6391 D AndroidRuntime: Shutting down VM
+11-17 13:02:25.875  6406  6406 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:25.931  6406  6406 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:02:25.954  6406  6406 D AndroidRuntime: Shutting down VM
+11-17 13:02:26.014  1398  1398 D SurfaceFlinger: duplicate layer name: changing io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.SettingsActivity to io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.SettingsActivity#1
+11-17 13:02:26.153  3114  3147 I chatty  : uid=10077(u0_a77) io.github.samaliyan.timeatlas identical 3 lines
+11-17 13:02:26.902  6416  6416 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:26.954  6416  6416 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:28.075  6416  6416 D AndroidRuntime: Shutting down VM
+11-17 13:02:28.367  6431  6431 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:28.412  6431  6431 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:02:28.420  6431  6431 D AndroidRuntime: Shutting down VM
+11-17 13:02:29.394  6441  6441 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:29.467  6441  6441 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:30.506  6441  6441 D AndroidRuntime: Shutting down VM
+11-17 13:02:30.679  6457  6457 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:30.731  6457  6457 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:02:30.739  6457  6457 D AndroidRuntime: Shutting down VM
+11-17 13:02:30.802  1398  1398 D SurfaceFlinger: duplicate layer name: changing io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.SettingsActivity to io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.SettingsActivity#1
+11-17 13:02:30.877  3114  3147 I chatty  : uid=10077(u0_a77) io.github.samaliyan.timeatlas identical 1 line
+11-17 13:02:31.683  6467  6467 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:31.740  6467  6467 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:32.862  6467  6467 D AndroidRuntime: Shutting down VM
+11-17 13:02:33.067  6482  6482 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:33.113  6482  6482 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:02:33.120  6482  6482 D AndroidRuntime: Shutting down VM
+11-17 13:02:35.511  6496  6496 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:35.573  6496  6496 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:36.612  6496  6496 D AndroidRuntime: Shutting down VM
+11-17 13:02:36.775  6510  6510 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:36.824  6510  6510 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:02:36.837  6510  6510 D AndroidRuntime: Shutting down VM
+11-17 13:02:36.878  1693  3445 W WindowManager: Attempted to set replacing window on non-existing app token Token{7ae06b ActivityRecord{4769ba u0 io.github.samaliyan.timeatlas/.MainActivity t6}}
+11-17 13:02:40.013  6525  6525 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:40.072  6525  6525 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:41.120  6525  6525 D AndroidRuntime: Shutting down VM
+11-17 13:02:41.298  6545  6545 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:41.358  6545  6545 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:42.398  6545  6545 D AndroidRuntime: Shutting down VM
+11-17 13:02:42.540  1693  2010 I ActivityManager: START u0 {flg=0x14000000 cmp=io.github.samaliyan.timeatlas/.MainActivity} from uid 2000
+11-17 13:02:42.570  1398  1423 E SurfaceFlinger: Failed to find layer (io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity#0) in layer parent (no-parent).
+11-17 13:02:42.605  3114  3119 I zygote64: Compiler allocated 4MB to compile void io.github.samaliyan.timeatlas.MainActivity.onCreate(android.os.Bundle)
+11-17 13:02:47.906  6598  6598 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:47.960  6598  6598 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:49.000  6598  6598 D AndroidRuntime: Shutting down VM
+11-17 13:02:49.650  1398  1398 D SurfaceFlinger: duplicate layer name: changing io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity to io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity#1
+11-17 13:02:53.513  6637  6637 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:53.567  6637  6637 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:54.595  6637  6637 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@e8282; boundsInParent: Rect(0, 0 - 328, 42); boundsInScreen: Rect(89, 624 - 417, 567); packageName: io.github.samaliyan.timeatlas; className: android.widget.TextView; text: Iran  ·  3h 30m ahead; error: null; maxTextLength: -1; contentDescription: null; viewIdResName: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_NEXT_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_SET_SELECTION - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]
+11-17 13:02:54.595  6637  6637 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@e8a04; boundsInParent: Rect(0, 0 - 177, 42); boundsInScreen: Rect(1888, 641 - 2065, 567); packageName: io.github.samaliyan.timeatlas; className: android.widget.TextView; text: Tue 17 Nov; error: null; maxTextLength: -1; contentDescription: null; viewIdResName: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_NEXT_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_SET_SELECTION - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]
+11-17 13:02:54.595  6637  6637 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@e2c2b; boundsInParent: Rect(0, 0 - 2070, 216); boundsInScreen: Rect(39, 744 - 2109, 567); packageName: io.github.samaliyan.timeatlas; className: android.widget.LinearLayout; text: null; error: null; maxTextLength: -1; contentDescription: New York, 4:30 AM, Tue 17 Nov, United States  ·  5h behind; viewIdResName: null; checkable: false; checked: false; focusable: true; focused: false; selected: false; clickable: true; longClickable: true; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; actions: [AccessibilityAction: ACTION_FOCUS - null, AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_CLICK - null, AccessibilityAction: ACTION_LONG_CLICK - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_NEXT_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_SET_SELECTION - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]
+11-17 13:02:54.595  6637  6637 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@e2fec; boundsInParent: Rect(0, 0 - 2070, 216); boundsInScreen: Rect(39, 988 - 2109, 567); packageName: io.github.samaliyan.timeatlas; className: android.widget.LinearLayout; text: null; error: null; maxTextLength: -1; contentDescription: Melbourne, 8:30 PM, Tue 17 Nov, Australia  ·  11h ahead; viewIdResName: null; checkable: false; checked: false; focusable: true; focused: false; selected: false; clickable: true; longClickable: true; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; actions: [AccessibilityAction: ACTION_FOCUS - null, AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_CLICK - null, AccessibilityAction: ACTION_LONG_CLICK - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_NEXT_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_SET_SELECTION - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]
+11-17 13:02:54.605  6637  6637 D AndroidRuntime: Shutting down VM
+11-17 13:02:55.811  6657  6657 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:55.867  6657  6657 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:56.912  6657  6657 D AndroidRuntime: Shutting down VM
+11-17 13:02:57.066  6671  6671 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:57.111  6671  6671 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:02:57.119  6671  6671 D AndroidRuntime: Shutting down VM
+11-17 13:02:57.218  3114  3147 I chatty  : uid=10077(u0_a77) io.github.samaliyan.timeatlas identical 1 line
+11-17 13:02:58.057  6681  6681 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:58.118  6681  6681 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:02:59.164  6681  6681 D AndroidRuntime: Shutting down VM
+11-17 13:02:59.350  6695  6695 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:02:59.403  6695  6695 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:02:59.411  6695  6695 D AndroidRuntime: Shutting down VM
+11-17 13:02:59.476  1693  2562 I ActivityManager: START u0 {cmp=io.github.samaliyan.timeatlas/.SettingsActivity} from uid 10077
+11-17 13:02:59.606  1693  1717 I ActivityManager: Displayed io.github.samaliyan.timeatlas/.SettingsActivity: +110ms
+11-17 13:03:00.353  6706  6706 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:00.405  6706  6706 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:01.496  6706  6706 D AndroidRuntime: Shutting down VM
+11-17 13:03:01.710  6720  6720 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:01.761  6720  6720 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:03:01.767  6720  6720 D AndroidRuntime: Shutting down VM
+11-17 13:03:01.769  6720  6728 I AndroidRuntime: NOTE: attach of thread 'Binder:6720_1' failed
+11-17 13:03:03.520  6738  6738 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:03.584  6738  6738 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:04.822  6738  6738 D AndroidRuntime: Shutting down VM
+11-17 13:03:04.991  6753  6753 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:05.039  6753  6753 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:03:05.058  6753  6753 D AndroidRuntime: Shutting down VM
+11-17 13:03:05.928  1693  1708 I ActivityManager: Force stopping io.github.samaliyan.timeatlas appid=10077 user=-1: deletePackageX
+11-17 13:03:05.929  1693  1708 I ActivityManager: Killing 3114:io.github.samaliyan.timeatlas/u0a77 (adj 0): stop io.github.samaliyan.timeatlas
+11-17 13:03:05.934  1693  1708 W ActivityManager: Force removing ActivityRecord{4769ba u0 io.github.samaliyan.timeatlas/.MainActivity t6}: app died, no saved state
+11-17 13:03:05.955  1693  1708 I WindowManager: Failed to capture screenshot of Token{7ae06b ActivityRecord{4769ba u0 io.github.samaliyan.timeatlas/.MainActivity t6 f}} appWin=Window{416223a u0 io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity} drawState=4
+11-17 13:03:06.061  1848  2070 E RecentsTaskLoader: Unexpected null component name or activity info: ComponentInfo{io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity}, null
+11-17 13:03:06.068  1693  1722 I ActivityManager: Force stopping io.github.samaliyan.timeatlas appid=10077 user=0: pkg removed
+11-17 13:03:06.115  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+11-17 13:03:06.115  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+11-17 13:03:06.115  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+11-17 13:03:06.068  1848  2070 E RecentsTaskLoader: Unexpected null component name or activity info: ComponentInfo{io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity}, null
+11-17 13:03:06.197  1808  1808 I GeofencerStateMachine: removeGeofences: removeRequest=RemoveGeofencingRequest[REMOVE_ALL packageName=io.github.samaliyan.timeatlas]
+11-17 13:03:06.389  1693  1722 I PackageManager.DexOptimizer: Running dexopt (dexoptNeeded=1) on: /data/app/vmdl1303494516.tmp/base.apk pkg=io.github.samaliyan.timeatlas isa=x86_64 dexoptFlags=boot_complete,public target-filter=quicken oatDir=/data/app/vmdl1303494516.tmp/oat sharedLibraries=null
+11-17 13:03:06.543  2182  5557 I Icing   : doRemovePackageData io.github.samaliyan.timeatlas
+11-17 13:03:07.311  1693  1722 V BackupManagerService: restoreAtInstall pkg=io.github.samaliyan.timeatlas token=2 restoreSet=0
+11-17 13:03:07.419  1808  6844 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+11-17 13:03:07.450  1808  6855 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+11-17 13:03:07.484  1693  4010 I ActivityManager: START u0 {flg=0x14000000 cmp=io.github.samaliyan.timeatlas/.MainActivity} from uid 2000
+11-17 13:03:07.590  2182  6852 I ChromeSync: [Sync,SyncIntentOperation] Handling the intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }.
+11-17 13:03:07.593  1979  1979 D ImsResolver: maybeAddedImsService, packageName: io.github.samaliyan.timeatlas
+11-17 13:03:07.662  2182  6867 I FontLog : Package io.github.samaliyan.timeatlas has no metadata [CONTEXT service_id=132 ]
+11-17 13:03:07.807  1693  2585 I ActivityManager: Start proc 6978:io.github.samaliyan.timeatlas/u0a78 for activity io.github.samaliyan.timeatlas/.MainActivity
+11-17 13:03:07.814  1693  3858 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+11-17 13:03:07.814  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+11-17 13:03:07.814  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+11-17 13:03:07.815  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+11-17 13:03:08.060  2182  6852 I ChromeSync: [Persistence,AffiliationManager] One of affiliation or grouping data for android://_oKXJf7eSKIEcJTFJFMDr7AJDXrsShiDnfV56gvnNyFUPiqtrXK0KDc12Nu_JtBCLuSbywq4krRE_nkbGoGBhA==@io.github.samaliyan.timeatlas/ was not found. Marking affiliation data as stale...
+11-17 13:03:08.763  1398  1398 D SurfaceFlinger: duplicate layer name: changing io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity to io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity#1
+11-17 13:03:09.611  1693  1717 I ActivityManager: Displayed io.github.samaliyan.timeatlas/.MainActivity: +1s848ms
+11-17 13:03:10.688  6978  7021 I chatty  : uid=10078(u0_a78) io.github.samaliyan.timeatlas identical 10 lines
+11-17 13:03:17.851  7054  7054 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:17.907  7054  7054 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:18.946  7054  7054 D AndroidRuntime: Shutting down VM
+11-17 13:03:19.129  7069  7069 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:19.185  7069  7069 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:20.219  7069  7069 D AndroidRuntime: Shutting down VM
+11-17 13:03:20.424  7084  7084 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:20.480  7084  7084 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:21.517  7084  7084 D AndroidRuntime: Shutting down VM
+11-17 13:03:21.697  7099  7099 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:21.757  7099  7099 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:22.785  7099  7099 D AndroidRuntime: Shutting down VM
+11-17 13:03:22.966  7113  7113 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:23.014  7113  7113 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:03:23.020  7113  7113 D AndroidRuntime: Shutting down VM
+11-17 13:03:23.275  1398  1398 D SurfaceFlinger: duplicate layer name: changing io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity to io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity#2
+11-17 13:03:26.329  7150  7150 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:26.452  7150  7150 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:27.482  7150  7150 D AndroidRuntime: Shutting down VM
+11-17 13:03:27.641  7165  7165 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:27.696  7165  7165 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:28.723  7165  7165 D AndroidRuntime: Shutting down VM
+11-17 13:03:29.573  7188  7188 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:29.623  7188  7188 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:30.647  7188  7188 D AndroidRuntime: Shutting down VM
+11-17 13:03:30.823  7203  7203 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:30.881  7203  7203 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:31.906  7203  7203 D AndroidRuntime: Shutting down VM
+11-17 13:03:32.066  7217  7217 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:32.123  7217  7217 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:33.147  7217  7217 D AndroidRuntime: Shutting down VM
+11-17 13:03:33.308  7231  7231 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:33.358  7231  7231 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:34.390  7231  7231 D AndroidRuntime: Shutting down VM
+11-17 13:03:34.556  7245  7245 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:34.609  7245  7245 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:35.637  7245  7245 D AndroidRuntime: Shutting down VM
+11-17 13:03:35.804  7260  7260 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:35.852  7260  7260 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-17 13:03:35.860  7260  7260 D AndroidRuntime: Shutting down VM
+11-17 13:03:35.903  1693  1722 I PackageManager.DexOptimizer: Running dexopt (dexoptNeeded=1) on: /data/app/vmdl948244927.tmp/base.apk pkg=io.github.samaliyan.timeatlas isa=x86_64 dexoptFlags=boot_complete,public target-filter=quicken oatDir=/data/app/vmdl948244927.tmp/oat sharedLibraries=null
+11-17 13:03:36.103  1693  1708 I ActivityManager: Force stopping io.github.samaliyan.timeatlas appid=10078 user=-1: installPackageLI
+11-17 13:03:36.103  1693  1708 I ActivityManager: Killing 6978:io.github.samaliyan.timeatlas/u0a78 (adj 0): stop io.github.samaliyan.timeatlas
+11-17 13:03:36.103  1693  1708 W ActivityManager: Force removing ActivityRecord{cbd3fe5 u0 io.github.samaliyan.timeatlas/.MainActivity t7}: app died, no saved state
+11-17 13:03:36.142  1693  1765 W InputDispatcher: channel '3c26530 io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+11-17 13:03:36.142  1693  1765 E InputDispatcher: channel '3c26530 io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity (server)' ~ Channel is unrecoverably broken and will be disposed!
+11-17 13:03:36.163  1693  1722 I PackageManager: Package io.github.samaliyan.timeatlas codePath changed from /data/app/io.github.samaliyan.timeatlas-z0d83i13BG3nkFRkyweZAQ== to /data/app/io.github.samaliyan.timeatlas-XuFrwZ1IJoJbIgWa-Tgncg==; Retaining data and using new
+11-17 13:03:36.163  1693  1722 W PackageManager: Code path for io.github.samaliyan.timeatlas changing from /data/app/io.github.samaliyan.timeatlas-z0d83i13BG3nkFRkyweZAQ== to /data/app/io.github.samaliyan.timeatlas-XuFrwZ1IJoJbIgWa-Tgncg==
+11-17 13:03:36.163  1693  1722 W PackageManager: Resource path for io.github.samaliyan.timeatlas changing from /data/app/io.github.samaliyan.timeatlas-z0d83i13BG3nkFRkyweZAQ== to /data/app/io.github.samaliyan.timeatlas-XuFrwZ1IJoJbIgWa-Tgncg==
+11-17 13:03:36.168  1693  2010 I WindowManager: WIN DEATH: Window{3c26530 u0 io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity}
+11-17 13:03:36.169  1693  2010 W InputDispatcher: Attempted to unregister already unregistered input channel '3c26530 io.github.samaliyan.timeatlas/io.github.samaliyan.timeatlas.MainActivity (server)'
+11-17 13:03:36.506  1693  1722 I ActivityManager: Force stopping io.github.samaliyan.timeatlas appid=10078 user=0: pkg removed
+11-17 13:03:36.516  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+11-17 13:03:36.516  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+11-17 13:03:36.516  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+11-17 13:03:36.608  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+11-17 13:03:36.608  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+11-17 13:03:36.612  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+11-17 13:03:36.612  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+11-17 13:03:36.643  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.apps.photos/.backgroundsignin.BackgroundSignInBroadcastReceiver
+11-17 13:03:36.643  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.apps.photos/.experiments.phenotype.full.PhenotypeAppUpgradeBroadcastReceiver
+11-17 13:03:36.644  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.apps.photos/.notificationchannels.AppUpdateBroadcastReceiver
+11-17 13:03:36.644  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+11-17 13:03:36.644  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+11-17 13:03:36.644  1693  1708 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+11-17 13:03:36.844  1979  1979 D ImsResolver: maybeAddedImsService, packageName: io.github.samaliyan.timeatlas
+11-17 13:03:36.898  2182  7284 I ChromeSync: [Sync,SyncIntentOperation] Handling the intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:io.github.samaliyan.timeatlas flg=0x4000010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }.
+11-17 13:03:36.981  2182  7287 I FontLog : Package io.github.samaliyan.timeatlas has no metadata [CONTEXT service_id=132 ]
+11-17 13:03:37.172  2182  7284 I ChromeSync: [Persistence,AffiliationManager] One of affiliation or grouping data for android://_oKXJf7eSKIEcJTFJFMDr7AJDXrsShiDnfV56gvnNyFUPiqtrXK0KDc12Nu_JtBCLuSbywq4krRE_nkbGoGBhA==@io.github.samaliyan.timeatlas/ was not found. Marking affiliation data as stale...
+11-17 13:03:44.927  1693  2562 I ActivityManager: START u0 {flg=0x14000000 cmp=io.github.samaliyan.timeatlas/.MainActivity} from uid 2000
+11-17 13:03:44.945  1693  3837 I ActivityManager: Start proc 7327:io.github.samaliyan.timeatlas/u0a78 for activity io.github.samaliyan.timeatlas/.MainActivity
+11-17 13:03:45.756  1693  1717 I ActivityManager: Displayed io.github.samaliyan.timeatlas/.MainActivity: +813ms
+11-17 13:03:50.273  7357  7357 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 13:03:50.325  7357  7357 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-17 13:03:51.381  7357  7357 D AndroidRuntime: Shutting down VM
