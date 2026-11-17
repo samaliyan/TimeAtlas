@@ -86,8 +86,7 @@ public final class SettingsActivity extends Activity {
             if (i != themeAtStart) recreate();
             else build();
         }));
-        item(getString(R.string.home_city), home != null ? home.name + "  ·  " + getString(R.string.home_city_hint)
-                : getString(R.string.home_city_none), v -> {
+        item(getString(R.string.home_city), home != null ? home.name : getString(R.string.home_city_none), v -> {
             if (cities.isEmpty()) return;
             String[] names = new String[cities.size()];
             int sel = 0;

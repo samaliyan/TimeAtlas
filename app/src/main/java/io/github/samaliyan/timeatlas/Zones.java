@@ -1,6 +1,7 @@
 package io.github.samaliyan.timeatlas;
 
 import android.content.Context;
+import android.os.Build;
 
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -45,9 +46,10 @@ final class Zones {
         return d;
     }
 
-    /** Location zones of the phone that no curated city already covers. */
+    /** Location zones of the phone that no curated city already covers (Android 9+; older phones use the curated list). */
     private static List<City> extraZones() {
         List<City> out = new ArrayList<>();
+        if (Build.VERSION.SDK_INT < 28) return out;
         try {
             Set<String> covered = new HashSet<>();
             for (String z : CityDb.curatedZones()) covered.add(canonical(z));

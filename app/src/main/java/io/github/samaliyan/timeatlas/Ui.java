@@ -8,7 +8,6 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.RippleDrawable;
-import android.os.Build;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -126,7 +125,7 @@ final class Ui {
         int p = dp(12);
         b.setPadding(p, p, p, p);
         b.setContentDescription(description);
-        if (Build.VERSION.SDK_INT >= 26) b.setTooltipText(description);
+        b.setTooltipText(description);
         return b;
     }
 

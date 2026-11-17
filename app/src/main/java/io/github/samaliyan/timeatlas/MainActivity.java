@@ -1,5 +1,6 @@
 package io.github.samaliyan.timeatlas;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -90,6 +91,7 @@ public final class MainActivity extends Activity {
         }
     }
 
+    @SuppressLint("InlinedApi")   // the flag is ignored before Android 13, which is fine for system broadcasts
     @Override protected void onResume() {
         super.onResume();
         if (Ui.isDark(this, store.theme()) != uiDark) {
@@ -103,7 +105,7 @@ public final class MainActivity extends Activity {
             f.addAction(Intent.ACTION_TIME_CHANGED);
             f.addAction(Intent.ACTION_TIMEZONE_CHANGED);
             f.addAction(Intent.ACTION_DATE_CHANGED);
-            registerReceiver(clockReceiver, f);
+            registerReceiver(clockReceiver, f, RECEIVER_NOT_EXPORTED);   // system broadcasts still arrive
             receiverOn = true;
         }
     }
@@ -275,6 +277,7 @@ public final class MainActivity extends Activity {
     /** Views of one city row. */
     private final class Row {
         final City city;
+        final ZoneId zone;
         final LinearLayout root;
         final TextView name, sub, time, day;
         final ImageView dayIcon, handle;
@@ -284,6 +287,7 @@ public final class MainActivity extends Activity {
 
         Row(City c) {
             city = c;
+            zone = ZoneId.of(c.zoneId);
             root = new LinearLayout(MainActivity.this);
             root.setGravity(Gravity.CENTER_VERTICAL);
             root.setMinimumHeight(ui.dp(76));
@@ -387,7 +391,7 @@ public final class MainActivity extends Activity {
         LocalDate homeDate = at.atZone(homeZone).toLocalDate();
 
         for (Row r : rows) {
-            ZoneId z = ZoneId.of(r.city.zoneId);
+            ZoneId z = r.zone;
             ZonedDateTime t = at.atZone(z);
             r.time.setText(TimeMath.time(t, h24));
             int shift = TimeMath.dayShift(homeDate, t.toLocalDate());
@@ -573,6 +577,7 @@ public final class MainActivity extends Activity {
      * Drag-to-reorder for edit mode. The dragged row follows the finger, the others slide out of the way,
      * and the new order is saved when the finger is lifted. The list scrolls when dragging near its edges.
      */
+    @SuppressLint("ClickableViewAccessibility")   // the handle is also reachable via the row menu (Remove / Set as home)
     private final class DragHelper implements View.OnTouchListener {
         private final Row row;
         private float startRawY;

@@ -1,5 +1,6 @@
 package io.github.samaliyan.timeatlas;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
@@ -215,6 +216,7 @@ final class Updater {
 
     // ------------------------------------------------------------------ install
 
+    @SuppressLint("InlinedApi")
     private void install(final File apk) {
         new Thread(() -> {
             try {
@@ -236,8 +238,9 @@ final class Updater {
                     }
                     token = UUID.randomUUID().toString();
                     Intent it = new Intent(ACTION).setPackage(act.getPackageName()).putExtra("token", token);
-                    int flags = PendingIntent.FLAG_UPDATE_CURRENT | (Build.VERSION.SDK_INT >= 31 ? PendingIntent.FLAG_MUTABLE : 0);
-                    s.commit(PendingIntent.getBroadcast(act, id, it, flags).getIntentSender());
+                    // Mutable: the installer adds the result to this intent. (The flag is ignored before Android 12.)
+                    int flags = PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE;
+                    s.commit(PendingIntent.getBroadcast(act.getApplicationContext(), id, it, flags).getIntentSender());
                 }
             } catch (Exception e) {
                 ui(() -> Toast.makeText(act, R.string.install_failed, Toast.LENGTH_LONG).show());
@@ -249,6 +252,7 @@ final class Updater {
      * The installer answers through a broadcast. It is registered on the application context so the answer
      * still arrives if the screen that started the update is closed meanwhile; it unregisters itself at the end.
      */
+    @SuppressLint("InlinedApi")
     private synchronized void registerReceiver() {
         if (receiver != null) return;
         final Context app = act.getApplicationContext();
@@ -278,9 +282,8 @@ final class Updater {
                 unregister();
             }
         };
-        IntentFilter f = new IntentFilter(ACTION);
-        if (Build.VERSION.SDK_INT >= 33) app.registerReceiver(receiver, f, Context.RECEIVER_NOT_EXPORTED);
-        else app.registerReceiver(receiver, f);
+        // Not exported on Android 13+; on older versions the random token above rejects foreign broadcasts.
+        app.registerReceiver(receiver, new IntentFilter(ACTION), Context.RECEIVER_NOT_EXPORTED);
     }
 
     @SuppressWarnings("deprecation")

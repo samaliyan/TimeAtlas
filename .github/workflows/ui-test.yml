@@ -30,7 +30,11 @@ jobs:
           gradle-version: '8.9'
 
       - name: Build release APK (minified, debug-signed, high build number so no update is offered)
-        run: BUILD_NUMBER=999999 gradle --no-daemon lintRelease assembleRelease
+        run: |
+          BUILD_NUMBER=999999 gradle --no-daemon lintRelease assembleRelease || FAILED=1
+          R=app/build/intermediates/lint_intermediate_text_report/release/lintReportRelease/lint-results-release.txt
+          if [ -f "$R" ]; then echo "===== lint report ====="; cat "$R"; fi
+          [ -z "${FAILED:-}" ]
 
       - name: Enable KVM
         run: |

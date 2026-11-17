@@ -50,7 +50,6 @@
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>
     <string name="home_city">Home city</string>
-    <string name="home_city_hint">differences are shown from here</string>
     <string name="home_city_none">Add a city first</string>
     <string name="widget_settings">Widget cities and style</string>
     <string name="widget_settings_hint">Applies to every TimeAtlas widget on your home screen</string>
