@@ -29,6 +29,15 @@ jobs:
         with:
           gradle-version: '8.9'
 
+      - name: Build an old version (build 1, real key) for the self-update test
+        env:
+          SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+        run: |
+          if [ -n "$SIGNING_PASSWORD" ]; then
+            BUILD_NUMBER=1 gradle --no-daemon assembleRelease
+            cp app/build/outputs/apk/release/app-release.apk tests/ui/old.apk
+          fi
+
       - name: Build release APK (minified, debug-signed, high build number so no update is offered)
         run: |
           BUILD_NUMBER=999999 gradle --no-daemon lintRelease assembleRelease || FAILED=1

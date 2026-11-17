@@ -159,7 +159,32 @@ tap "Check for updates now"
 shot 25_update_check 0.6
 back
 
-# 14. Crash check
+# 14. Self-update from GitHub: an old build (same key) must find the latest release, download and install it
+if [ -f old.apk ]; then
+  adb uninstall "$PKG" > /dev/null
+  adb install old.apk > /dev/null && log "old build installed"
+  adb shell appops set "$PKG" REQUEST_INSTALL_PACKAGES allow
+  launch; sleep 6
+  shot 26_update_offered 1
+  expect "Update available"
+  tap_any "Update" "UPDATE"
+  for i in $(seq 1 30); do      # wait for the download and Android's install confirmation
+    sleep 2
+    p=$(nfind "Update" '^(Update|UPDATE|Install|INSTALL)$')
+    if [ -n "$p" ] && [ -z "$(nfind "Update available")" ]; then break; fi
+  done
+  shot 27_install_confirm 0.5
+  tap_any "Update" "UPDATE" "Install" "INSTALL"
+  sleep 8
+  CODE=$(adb shell dumpsys package "$PKG" | sed -n 's/.*versionCode=\([0-9]*\).*/\1/p' | head -n1)
+  if [ -n "$CODE" ] && [ "$CODE" -gt 1 ]; then log "ok: updated in-app to build $CODE"; else fail "in-app update did not install (versionCode=$CODE)"; fi
+  launch
+  shot 28_after_update 2
+else
+  log "self-update test skipped (no signing secret)"
+fi
+
+# 15. Crash check
 adb logcat -d -b crash > "$OUT/crash.txt" 2>/dev/null
 if grep -q "$PKG" "$OUT/crash.txt"; then fail "app crashed (see crash.txt)"; else log "ok: no crash"; fi
 adb logcat -d | grep -iE "AndroidRuntime|$PKG|StrictMode" | tail -200 > "$OUT/logcat.txt"
