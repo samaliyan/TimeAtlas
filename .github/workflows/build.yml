@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths-ignore:
       - '**.md'
+      - 'docs/**'
       - 'tests/ui/**'
       - '.github/workflows/ui-test.yml'
   workflow_dispatch:

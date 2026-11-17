@@ -11,6 +11,10 @@ A light, offline world clock for Android that answers the question most clock ap
 - **Share** the converted times as text, **12/24-hour** and **light/dark** theme, drag to reorder, long-press a city to make it home.
 - **Updates itself** from this repository's Releases (asks first; Android shows its own install confirmation).
 
+| Live | 5 PM in Melbourne, everywhere | Widget | Dark, 12-hour |
+| --- | --- | --- | --- |
+| ![Live](docs/main.png) | ![Convert](docs/convert.png) | ![Widget](docs/widget.png) | ![Dark](docs/dark.png) |
+
 ## Install
 
 Download `TimeAtlas.apk` from the [latest release](https://github.com/samaliyan/TimeAtlas/releases/latest) and open it.
@@ -31,7 +35,7 @@ There are no third-party libraries. Local builds are signed with the debug key; 
 | What | How |
 | --- | --- |
 | Core logic (time math, DST, search, storage, share text) — 500 checks | `bash tests/run_core.sh` (runs on every build) |
-| Full app on Android 8.0 and Android 14 emulators, with screenshots | *Actions → UI test (emulator) → Run workflow* |
+| Full app on Android 8.0 and Android 14 emulators: every screen, widget on the home screen, in-app update from GitHub; screenshots go to the `ui-results-26` / `ui-results-34` branches | *Actions → UI test (emulator) → Run workflow* |
 
 ## Releases
 
