@@ -1,0 +1,51 @@
+[ui] API 34
+[ui] shot 01_main_first_start
+[ui] ok: sees 'Tehran'
+[ui] ok: sees 'London'
+[ui] ok: sees 'New York'
+[ui] ok: sees 'Melbourne'
+[ui] ok: sees 'Now in Tehran'
+[ui] shot 02_ruler_dragged
+[ui] ok: sees 'Converting from Tehran'
+[ui] ok: sees 'Now'
+[ui] shot 03_back_to_live
+[ui] ok: sees 'Now in Tehran'
+[ui] shot 04_time_picker
+[ui] shot 05_from_melbourne
+[ui] ok: sees 'Converting from Melbourne'
+[ui] shot 06_date_picker
+[ui] shot 07_search_tokyo
+[ui] shot 08_tokyo_added
+[ui] ok: sees 'Tokyo'
+[ui] shot 09_no_results
+[ui] ok: sees 'No matching city or time zone'
+[ui] shot 10_search_usa
+[ui] ok: sees 'New York'
+[ui] ok: sees 'Washington, D.C.'
+[ui] shot 11_row_menu
+[ui] shot 12_london_home
+[ui] shot 13_edit_list
+[ui] shot 14_reordered
+[ui] shot 15_tokyo_removed
+[ui] ok: no 'Tokyo'
+[ui] shot 16_settings
+[ui] shot 17_widget_settings
+[ui] shot 18_widget_dark
+[ui] shot 19_pin_widget_dialog
+[ui] shot 20_home_screen_widget
+[ui] shot 20b_home_screen_widget_page2
+[ui] ok: widget is on the home screen
+[ui] shot 21_settings_dark
+[ui] shot 22_main_dark_12h
+[ui] ok: sees 'AM|PM'
+[ui] shot 23_large_text
+[ui] shot 24_landscape
+[ui] shot 25_update_check
+[ui] old build installed
+[ui] shot 26_update_offered
+[ui] ok: sees 'Update available'
+[ui] shot 27_install_confirm
+[ui] ok: updated in-app to build 105
+[ui] shot 28_after_update
+[ui] ok: no crash
+[ui] failures: 0
