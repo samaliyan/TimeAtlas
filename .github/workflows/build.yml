@@ -1,0 +1,93 @@
+name: Build and release
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'tests/ui/**'
+      - '.github/workflows/ui-test.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Unit tests (time logic, city search, storage)
+        run: bash tests/run_core.sh
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Lint and build release APK
+        env:
+          SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+        run: |
+          export BUILD_NUMBER=$((GITHUB_RUN_NUMBER + 100))
+          echo "BUILD_NUMBER=$BUILD_NUMBER" >> "$GITHUB_ENV"
+          gradle --no-daemon lintRelease assembleRelease
+
+      - name: Check signing secret (published APKs must use the app key)
+        env:
+          SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+        run: |
+          if [ -z "$SIGNING_PASSWORD" ]; then
+            echo "::error::Repository secret SIGNING_PASSWORD is missing. See signing/README.md."
+            exit 1
+          fi
+          keytool -list -storetype pkcs12 -keystore signing/timeatlas.p12 -storepass "$SIGNING_PASSWORD" > /dev/null \
+            || { echo "::error::SIGNING_PASSWORD does not open signing/timeatlas.p12"; exit 1; }
+
+      - name: Verify the APK is signed with the app key
+        run: |
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/*/ | sort -V | tail -n1)
+          APK=app/build/outputs/apk/release/app-release.apk
+          "${BT}apksigner" verify --print-certs "$APK" | tee "$RUNNER_TEMP/certs.txt"
+          grep -qi "SHA-256 digest: $(cat signing/cert-sha256.txt)" "$RUNNER_TEMP/certs.txt" \
+            || { echo "::error::APK is not signed with signing/timeatlas.p12"; exit 1; }
+          cp "$APK" "$RUNNER_TEMP/TimeAtlas.apk"
+          ls -l "$RUNNER_TEMP/TimeAtlas.apk"
+
+      - uses: actions/upload-artifact@v4
+        if: success() || failure()
+        with:
+          name: TimeAtlas-build
+          path: |
+            ${{ runner.temp }}/TimeAtlas.apk
+            app/build/reports/lint-results-release.html
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          V=$(sed -n "s/^ *versionName '\([0-9.]*\)'.*/\1/p" app/build.gradle)
+          [ -n "$V" ] || { echo "::error::versionName not found in app/build.gradle"; exit 1; }
+          TAG="v$V"
+          # Release notes = the CHANGELOG section of this version. The last line (code=N) is read by the app.
+          awk -v v="$V" 'index($0,"## ")==1 { if (f) exit; if ($2 == v) { f=1; next } } f' CHANGELOG.md > "$RUNNER_TEMP/notes.md"
+          [ -s "$RUNNER_TEMP/notes.md" ] || { echo "::error::CHANGELOG.md has no '## $V' section"; exit 1; }
+          printf '\n\ncode=%s\n' "$BUILD_NUMBER" >> "$RUNNER_TEMP/notes.md"
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            gh release upload "$TAG" "$RUNNER_TEMP/TimeAtlas.apk" --clobber
+            gh release edit "$TAG" --title "TimeAtlas $V" --notes-file "$RUNNER_TEMP/notes.md" --latest
+            git tag -f "$TAG" "$GITHUB_SHA" && git push -f origin "refs/tags/$TAG" || echo "could not move the tag (not important)"
+          else
+            gh release create "$TAG" "$RUNNER_TEMP/TimeAtlas.apk" --target "$GITHUB_SHA" \
+              --title "TimeAtlas $V" --notes-file "$RUNNER_TEMP/notes.md" --latest
+          fi

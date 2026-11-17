@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#FFF4F6F9</color>
+    <color name="accent">#FF2563EB</color>
+    <!-- Widget "Auto" style: follows the phone's light/dark mode (see values-night). -->
+    <color name="widget_bg">#F2FFFFFF</color>
+    <color name="widget_text">#FF12161C</color>
+    <color name="widget_sub">#FF5F6874</color>
+    <color name="ic_bg">#FF1E3A8A</color>
+</resources>
